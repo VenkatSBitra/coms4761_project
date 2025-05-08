@@ -59,11 +59,11 @@ The following Python scripts are used in this project:
 
 ### ArcCell
 
-ArcCell is a novel cell annotation model that integrates preprocessing techniques to balance rare and common cell types with a classifier that uses a highly discriminative dimensionality reduction method (ArcFace). [cite: 102, 103] This approach aims to annotate cell types effectively and efficiently. [cite: 103] A schematic of the ArcCell pipeline is illustrated below:
+ArcCell is a novel cell annotation model that integrates preprocessing techniques to balance rare and common cell types with a classifier that uses a highly discriminative dimensionality reduction method (ArcFace). This approach aims to annotate cell types effectively and efficiently. A schematic of the ArcCell pipeline is illustrated below:
 
 *Input -> Normalized Embedding -> ArcFace Weights -> Cos(θyi) -> arccos(cos(θyi)) = θyi -> θyi + m -> cos(θyi + m) -> Rescaled Feature Vector -> Softmax Probability -> Ground Truth -> Cross-entropy loss*
 *Input -> Normalized Embedding -> ArcFace Weights -> Cos(θyi) -> Softmax Probability -> Ground Truth -> Cross-entropy loss*
-[cite: 66]
+
 
 ### CellTypist (Baseline)
 
@@ -71,18 +71,18 @@ CellTypist is used as a baseline model for comparison. The project evaluates bot
 
 ## Results
 
-The ArcCell pipeline demonstrated significant improvements in cell type annotation accuracy compared to the CellTypist baseline across multiple evaluation metrics. [cite: 69]
+The ArcCell pipeline demonstrated significant improvements in cell type annotation accuracy compared to the CellTypist baseline across multiple evaluation metrics. 
 
 * **Male Mouse Gonadal Test Dataset (33120 cells):**
-    * ArcCell: Accuracy 95.73%, F1 Score 0.9573 [cite: 70]
-    * CellTypist: Accuracy 58.71%, F1 Score 0.6224 [cite: 70]
+    * ArcCell: Accuracy 95.73%, F1 Score 0.9573 
+    * CellTypist: Accuracy 58.71%, F1 Score 0.6224 
 * **Female Mouse Gonadal Dataset (Out-of-sample, 33120 cells):**
-    * ArcCell: Accuracy 93.51%, F1 Score 0.9375 [cite: 71]
-    * CellTypist: Accuracy 60.71%, F1 Score 0.6192 [cite: 71]
+    * ArcCell: Accuracy 93.51%, F1 Score 0.9375 
+    * CellTypist: Accuracy 60.71%, F1 Score 0.6192 
 
-ArcCell showed particular strength in classifying rare cell types like erythrocytes (94% precision and 94% recall for ArcCell vs. 12% precision and 99% recall for CellTypist on the female dataset). [cite: 72, 89] For mesenchymal cells, the most abundant type, ArcCell achieved 98% precision and 89% recall on the female dataset, compared to CellTypist's 100% precision but only 21% recall. [cite: 73, 89]
+ArcCell showed particular strength in classifying rare cell types like erythrocytes (94% precision and 94% recall for ArcCell vs. 12% precision and 99% recall for CellTypist on the female dataset). For mesenchymal cells, the most abundant type, ArcCell achieved 98% precision and 89% recall on the female dataset, compared to CellTypist's 100% precision but only 21% recall.
 
-**Comparative Results on Test Dataset (Male Gonadal):** [cite: 86, 87]
+**Comparative Results on Test Dataset (Male Gonadal):** 
 
 | Cell Type            | ArcCell Precision | ArcCell Recall | ArcCell F1-Score | CellTypist Precision | CellTypist Recall | CellTypist F1-Score |
 | -------------------- | ----------------- | -------------- | ---------------- | -------------------- | ----------------- | ------------------- |
@@ -99,7 +99,7 @@ ArcCell showed particular strength in classifying rare cell types like erythrocy
 | **Overall Accuracy** |                   |                | **0.9573** |                      |                   | **0.5871** |
 | **Overall F1 Score** |                   |                | **0.9573** |                      |                   | **0.6224** |
 
-**Comparative Results on Out-of-Sample Dataset (Female Gonadal):** [cite: 88, 89]
+**Comparative Results on Out-of-Sample Dataset (Female Gonadal):**
 
 | Cell Type            | ArcCell Precision | ArcCell Recall | ArcCell F1-Score | CellTypist Precision | CellTypist Recall | CellTypist F1-Score |
 | -------------------- | ----------------- | -------------- | ---------------- | -------------------- | ----------------- | ------------------- |
@@ -116,7 +116,7 @@ ArcCell showed particular strength in classifying rare cell types like erythrocy
 | **Overall Accuracy** |                   |                | **0.9351** |                      |                   | **0.6071** |
 | **Overall F1 Score** |                   |                | **0.9375** |                      |                   | **0.6192** |
 
-t-SNE visualizations also revealed that ArcCell produced tighter, more biologically coherent clusters compared to baseline methods. [cite: 76] Marker gene analysis demonstrated ArcCell's ability to identify biologically relevant marker genes, matching the baseline in identifying canonical markers and excelling at uncovering genes defining rare or transitional cell populations. [cite: 81, 94]
+t-SNE visualizations also revealed that ArcCell produced tighter, more biologically coherent clusters compared to baseline methods. Marker gene analysis demonstrated ArcCell's ability to identify biologically relevant marker genes, matching the baseline in identifying canonical markers and excelling at uncovering genes defining rare or transitional cell populations. 
 
 ## Authors
 
@@ -126,7 +126,7 @@ t-SNE visualizations also revealed that ArcCell produced tighter, more biologica
 
 ## Acknowledgments
 
-The authors thank the class, Professor Pe'er, and the TAs for their invaluable feedback on the outline, midterm, and final presentations. [cite: 107]
+The authors thank the class, Professor Pe'er, and the TAs for their invaluable feedback on the outline, midterm, and final presentations.
 
 ## References
-(See Genomics_Final_Report.pdf for a full list of references) [cite: 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121]
+(See Genomics_Final_Report.pdf for a full list of references) 
