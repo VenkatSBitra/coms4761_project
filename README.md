@@ -6,7 +6,7 @@ This repository contains the code and information related to the final project f
 
 ## Abstract
 
-We introduce ArcCell, a lightweight and generalizable model for single-cell RNA-seq cell type annotation. ArcCell combines balanced preprocessing with ArcFace-based dimensionality reduction and a supervised classifier, achieving strong performance across diverse datasets. On mouse gonadal data, ArcCell reached a macro F1 score of 0.96 on the test set and 0.94 on out-of-sample data, substantially outperforming the CellTypist baseline (F1 scores of 0.62). [cite: 1] The model is especially effective for rare cell types, demonstrating high precision and recall. These results highlight ArcCell's robustness and potential for scalable, accurate cell annotation in biological research.
+We introduce ArcCell, a lightweight and generalizable model for single-cell RNA-seq cell type annotation. ArcCell combines balanced preprocessing with ArcFace-based dimensionality reduction and a supervised classifier, achieving strong performance across diverse datasets. On mouse gonadal data, ArcCell reached a macro F1 score of 0.96 on the test set and 0.94 on out-of-sample data, substantially outperforming the CellTypist baseline (F1 scores of 0.62). The model is especially effective for rare cell types, demonstrating high precision and recall. These results highlight ArcCell's robustness and potential for scalable, accurate cell annotation in biological research.
 
 ## Data
 
@@ -86,7 +86,7 @@ pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https
 The following Python scripts are used in this project:
 
 * **`preprocess.py`**: This script is used for preprocessing the raw data. It includes steps such as filtering cells and genes, normalization, and log transformation. It prepares the data for input into the models.
-* **`dnn.py`**: This script implements the ArcCell model. ArcCell utilizes an ArcFace-based dimensionality reduction technique followed by a supervised classifier. [cite: 1]
+* **`dnn.py`**: This script implements the ArcCell model. ArcCell utilizes an ArcFace-based dimensionality reduction technique followed by a supervised classifier.
 * **`celltypist.py`**: This script implements the CellTypist model with an unbalanced dataset approach, serving as a baseline for comparison.
 * **`celltypist_balanced.py`**: This script implements the CellTypist model with a balanced dataset approach.
 
