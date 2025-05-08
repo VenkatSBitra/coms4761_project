@@ -27,7 +27,22 @@ Ensure you have Python 3.x installed. The following Python libraries are require
 
 ```bash
 pip install scanpy pandas numpy scikit-learn scipy tqdm shap plotly matplotlib Ensembl_converter
+```
 
+To install PyTorch:
+
+**If you have a CUDA-enabled GPU available (specifically for CUDA 11.8):**
+
+Use the following command to install PyTorch with CUDA support:
+```bash
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+```
+
+**If you do not have a CUDA-enabled GPU or want to install the CPU-only version:**
+
+Use the following command to install PyTorch with CUDA support:
+```bash
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cpu
 ```
 
 ## Folder Structure
