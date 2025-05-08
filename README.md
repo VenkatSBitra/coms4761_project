@@ -33,19 +33,27 @@ The following Python scripts are used in this project:
     ```bash
     python preprocess.py
     ```
-3.  **Run Models:**
+    or
+    Run the **`preprocess.ipynb`** for interactivity.
+4.  **Run Models:**
     * To run the ArcCell model:
         ```bash
         python dnn.py
         ```
+        or
+        Run the **`dnn.ipynb`** for interactivity.
     * To run the unbalanced CellTypist model:
         ```bash
         python celltypist.py
         ```
+        or
+        Run the **`celltypist.ipynb`** for interactivity.
     * To run the balanced CellTypist model:
         ```bash
         python celltypist_balanced.py
         ```
+        or
+        Run the **`celltypist_balanced.ipynb`** for interactivity.
 
 ## Models
 
