@@ -67,6 +67,8 @@ pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https
 
 ├── dnn.py
 
+├── marker_genes_analysis.py
+
 ├── preprocess.py
 
 ├── Genomics_Final_Report.pdf
@@ -89,7 +91,8 @@ The following Python scripts are used in this project:
 * **`dnn.py`**: This script implements the ArcCell model. ArcCell utilizes an ArcFace-based dimensionality reduction technique followed by a supervised classifier.
 * **`celltypist.py`**: This script implements the CellTypist model with an unbalanced dataset approach, serving as a baseline for comparison.
 * **`celltypist_balanced.py`**: This script implements the CellTypist model with a balanced dataset approach.
-
+* **`marker_genes_analysis.py`**: This script is used to analyze marker genes from baseline and ArcCell.
+  
 **General Workflow:**
 
 1.  **Download Data:** Obtain the male and female mouse gonadal `.h5ad` files from the links above and save them in a `data/` directory.
